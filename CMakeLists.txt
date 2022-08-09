@@ -19,4 +19,13 @@ include_directories(${DIVISION_HEADERS_DIR})
 add_subdirectory(src)
 add_subdirectory(test)
 
+add_custom_target(run
+    COMMAND bin/template_project
+    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+)
+
+add_custom_target(test
+    COMMAND bin/template_project_tests
+    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+)
 
